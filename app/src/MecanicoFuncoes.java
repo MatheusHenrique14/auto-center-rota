@@ -8,7 +8,7 @@ public class MecanicoFuncoes {
         Scanner scanner = new Scanner(System.in);
 
         try {
-            FileWriter arquivo = new FileWriter("data/mecanico.csv", true);
+            FileWriter arquivo = new FileWriter("app/data/mecanico.csv", true);
             PrintWriter gravador = new PrintWriter(arquivo);
 
             System.out.println("==================================");
@@ -19,7 +19,7 @@ public class MecanicoFuncoes {
 
             scanner.nextLine();
 
-            System.out.print("\n> Informe o Nome do Mecânico: ");
+            System.out.print("> Informe o Nome do Mecânico: ");
             Mecanico.nome = scanner.nextLine();
 
             escolherEspecialidade();
@@ -29,10 +29,14 @@ public class MecanicoFuncoes {
             gravador.println(dado);
 
             gravador.close();
-            scanner.close();
+
+            System.out.println("==================================");
+            System.out.println("Mecânico Cadastrado com Sucesso.");
+            System.out.println("==================================");
         } catch (Exception e) {
-            System.out.println("Error ao Cadastrar o Mecânico: " + e.getMessage());
+            System.out.println("Erro ao Cadastrar o Mecânico: " + e.getMessage());
         }
+
     }
 
     public static String escolherEspecialidade() {
@@ -61,8 +65,6 @@ public class MecanicoFuncoes {
                 System.out.println("Opção Inválida.");
                 break;
         }
-
-        scanner.close();
 
         return Mecanico.especialidade;
     }

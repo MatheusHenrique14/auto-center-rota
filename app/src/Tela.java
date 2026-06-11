@@ -33,10 +33,10 @@ public class Tela {
                     MecanicoFuncoes.cadastrarMecanico();
                     break;
                 case 2:
-                    System.out.println("Cadastro Cliente.");
+                    ClienteFuncoes.cadastrarCliente();
                     break;
                 case 3:
-                    System.out.println("Cadastro Estoque.");
+                    EstoqueFuncoes.cadastrarEstoque();
                     break;
                 case 4:
                     System.out.println("Abrir OS.");
@@ -51,9 +51,10 @@ public class Tela {
                     System.out.println("Faturamento.");
                     break;
                 case 0:
+                    System.out.println("==================================");
                     System.out.println("Saindo...");
+                    System.out.println("==================================");
                     return;
-
                 default:
                     System.out.println("Opção Inválida.");
                     break;
