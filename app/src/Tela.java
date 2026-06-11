@@ -39,7 +39,7 @@ public class Tela {
                     EstoqueFuncoes.cadastrarEstoque();
                     break;
                 case 4:
-                    System.out.println("Abrir OS.");
+                    OsFuncoes.cadastrarOrdemServico();
                     break;
                 case 5:
                     System.out.println("Comissão.");
